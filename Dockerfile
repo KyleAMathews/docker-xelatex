@@ -15,6 +15,6 @@ RUN find $PWD/fonts/ -name "*.ttf" -exec install -m644 {} /usr/share/fonts/truet
 RUN fc-cache -f -v
 
 # Install the texlive-xetex package which includes the Xelatex executable.
-RUN apt-get install -y git
+RUN apt-get install -y git wget lsb_release
 RUN git clone https://github.com/scottkosty/install-tl-ubuntu.git
 RUN cd install-tl-ubuntu; ./install-tl-ubuntu
